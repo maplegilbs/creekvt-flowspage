@@ -20,7 +20,7 @@ const usgsStationIDs = {
   "NEW HAVEN RIVER @ BROOKSVILLE, NR MIDDLEBURY, VT ": "04282525",
   "MAD RIVER NEAR MORETOWN, VT ": "04288000",
   "MISSISQUOI RIVER NEAR NORTH TROY, VT ": "04293000",
-  "MISSISQUOI RIVER NEAR EAST BERKSHIRE, VT": "04293500",
+  // "MISSISQUOI RIVER NEAR EAST BERKSHIRE, VT": "04293500",
   "OTTAUQUECHEE RIVER NEAR WEST BRIDGEWATER, VT": "01150900"
 };
 const noaaStations = Object.keys(noaaStationIDs);
@@ -53,27 +53,37 @@ const twoDigitMins = function (inputMins) {
   return inputMins;
 };
 
-//returning color for rainfall total
+//returning color for rainfall total - prior colors commented out
 const rainColors = function (rainfallTotal) {
   let color = "#ffffff";
   switch (true) {
     case rainfallTotal < 0.25:
-      color = "#ddd"; //'#699fd0';
+      // color = "#ddd"; //'#699fd0';
+      color = "#888"; 
+      break;
+    case rainfallTotal < .5:
+      // color = "#3cb447";
+      color = "rgb(80,140, 85)";
       break;
     case rainfallTotal < 1:
-      color = "#3cb447";
+      // color = "#3cb447";
+      color = "rgb(70,120,75)";
       break;
-    case rainfallTotal < 2:
-      color = "#f6f63d";
+      case rainfallTotal < 2:
+        // color = "#f6f63d";
+        color = "rgb(250,225, 80)";
       break;
     case rainfallTotal < 2.5:
-      color = "#fbde88";
+      // color = "#fbde88";
+      color = "red";
       break;
     case rainfallTotal < 3:
-      color = "#f7ac3c";
+      // color = "#f7ac3c";
+      color = "rgb(250,175,50)";
       break;
     case rainfallTotal >= 3:
-      color = "#f73c3c";
+      // color = "#f73c3c";
+      color = "rgb(220,50,50)";
       break;
   }
   return color;
