@@ -180,5 +180,3 @@ function initMap() {
 	}
 
 }
-
-//n0MWou4e@t1n
