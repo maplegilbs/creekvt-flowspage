@@ -961,13 +961,9 @@ div#radarInfo {
 		flex-basis: 95%;
 		margin: 10px auto;
 	}
-	
-	#rainTable td {
-		padding: 6px;
-		font-size: .75em;
-	}
-	
+		
 	#rainTable td.stationName, #rainTable td.rainDate, #rainTable td.source {
+		padding: 4px;
 	font-size: .7em;
 	font-weight: 800;
 } 
