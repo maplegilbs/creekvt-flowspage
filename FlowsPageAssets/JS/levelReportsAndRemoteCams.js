@@ -46,6 +46,7 @@ async function getCamImages(){
 		<summary>Click For Reference Images</summary>
 		<div class='camImages'>
 			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBLow.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBLow.jpg'></a></div>
+			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBLowRunnable.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBLowRunnable.jpg'></a></div>
 			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBMed.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBMed.jpg'></a></div>
 		</div>
 		<p>This camera was installed on September 3, 2021 - further correlations and details to come.</p>
