@@ -556,7 +556,7 @@ let rivers = {
 	},
 	madRiverLower: {
 		name: "Mad River (Lower)",
-		url: "comingsoon",
+		url: "lowermad",
 		gauges: {
 	   gauge1: {
 		name: "MAD RIVER NEAR MORETOWN, VT",
