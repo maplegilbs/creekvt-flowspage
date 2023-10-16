@@ -484,14 +484,35 @@ div#handlebarsPopulatedInfo {
 	margin: 20px auto; 
 }
 
+
+
 #riverCams p {
 	font-size: 14px;
 	margin-bottom: 14px;
 }
 
 .camImage {
-	flex-basis: 45%;
-	margin: 10px auto;
+	flex-basis: 5%;
+	flex-grow: 1;
+	margin: 10px 5px;
+}
+
+.camImage a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.imageOverlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceOverlay_20230921.png");
+  background-size: cover;
+  z-index: 1000;
 }
 
 .refImage {
@@ -770,6 +791,7 @@ div#radarInfo {
 /*Footer Styles*/
 #flowsFooter {
 	width: 100%;
+	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	background-image: linear-gradient(180deg, #4e647b, #293b46);
@@ -961,10 +983,11 @@ div#radarInfo {
 		flex-basis: 95%;
 		margin: 10px auto;
 	}
-
+	
 	#rainTable td {
 		font-size: 1rem;
 	}
+		
 		
 	#rainTable td.stationName, #rainTable td.rainDate, #rainTable td.source {
 		padding: 4px;

@@ -4,36 +4,38 @@ function loaderHide() {
 };
 
 
-async function getCamImages() {
-	let middImages = await fetch("https://river-cams-photo-fetch.herokuapp.com/photos?riverName=middlebury&quantity=1000")
-	let middImagesJSON = await middImages.json();
-	middImagesJSON.reverse();
-
-	let newHavenImages = await fetch("https://river-cams-photo-fetch.herokuapp.com/photos?riverName=newhaven&quantity=1000")
-	let newHavenImagesJSON = await newHavenImages.json();
-	newHavenImagesJSON.reverse();
-
-	let bbImages = await fetch("https://river-cams-photo-fetch.herokuapp.com/photos?riverName=bigbranch&quantity=1000")
-	let bbImagesJSON = await bbImages.json();
-	bbImagesJSON.reverse();
-
-	let camsContent =
-		`<p>These images are gathered from cell-enabled trail cams set to take images every 2hrs between 7am and 5pm</p>  
+async function getCamImages(){
+    let middImages = await fetch("https://river-cams-photo-fetch.herokuapp.com/photos?riverName=middlebury&quantity=1000")
+    let middImagesJSON = await middImages.json();
+    middImagesJSON.reverse();
+    
+    let newHavenImages = await fetch("https://river-cams-photo-fetch.herokuapp.com/photos?riverName=newhaven&quantity=1000")
+    let newHavenImagesJSON = await newHavenImages.json();
+    newHavenImagesJSON.reverse();
+    
+    let bbImages = await fetch("https://river-cams-photo-fetch.herokuapp.com/photos?riverName=bigbranch&quantity=1000")
+    let bbImagesJSON = await bbImages.json();
+    bbImagesJSON.reverse();
+    
+    let camsContent = 
+`<p>These images are gathered from cell-enabled trail cams set to take images every 2hrs between 7am and 5pm</p>  
 		<p>Issues with these images?  Contact us at <a href='mailto:gopaddling@creekvt.com?subject=River Cameras'> gopaddling@creekvt.com</a></p>
 		<br>
-		<!--<h4>New Haven River</h4>
+		<h4>New Haven River</h4>
 		<h5>Below Route 116 Bridge, 100 yrds below the ledges takeout</h5>
 		<br/>
 		<details>
 		<summary>Click For Reference Images</summary>
 		<br/>
 		<div class='camImages'>
-			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRef_0ft10in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRef_0ft10in.jpg'></a></div>
-			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRef_0ft10in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRef_1ft6in.jpg'></a></div>
-			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRef_1ft10in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRef_1ft10in.jpg'></a></div>
+			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_0ft10in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_0ft10in.jpg'></a></div>
+			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_1ft2in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_1ft2in.jpg'></a></div>
+			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_1ft5in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_1ft5in.jpg'></a></div>
+			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_1ft10in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_1ft10in.jpg'></a></div>
+				<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_2ft0in.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceImages_2ft0in.jpg'></a></div>
 		</div>
 		
-				<p class='disclaimer'>Level reference guide
+				<p class='disclaimer'>Ledges Level reference guide
 				<br/>
 				 8" Minimum
 				 <br/>
@@ -54,13 +56,21 @@ async function getCamImages() {
 		<br>
 		<h5>Most Recent Images</h5>
 		<div class='camImages'>
-			<div class='camImage'><a href=${newHavenImagesJSON[0]} target='_blank'><img width='100%' src=${newHavenImagesJSON[0]}></a></div>
-			<div class='camImage'><a href=${newHavenImagesJSON[1]} target='_blank'><img width='100%' src=${newHavenImagesJSON[1]}></a></div>
-			<div class='camImage'><a href=${newHavenImagesJSON[2]} target='_blank'><img width='100%' src=${newHavenImagesJSON[2]}></a></div>
-			<div class='camImage'><a href=${newHavenImagesJSON[3]} target='_blank'><img width='100%' src=${newHavenImagesJSON[3]}></a></div>
+			<div class='camImage'>
+			  <a href=${newHavenImagesJSON[0]} target='_blank'>
+			    <!--<div class="imageOverlay"></div>-->
+			    <img width='100%' src=${newHavenImagesJSON[0]}>
+			  </a>
+			</div>
+			<div class='camImage'>
+			  <a href=${newHavenImagesJSON[1]} target='_blank'>
+			    <!--<div class="imageOverlay"></div>-->
+			    <img width='100%' src=${newHavenImagesJSON[1]}>
+			  </a>
+			</div>
 		</div>
 		<hr>
-		<br>-->
+		<br>
 		<h4>Middlebury River</h4>
 		<h5>Near Grist Mill Road Bridge, ½ mile below the takeout</h5>
 		<br/>
@@ -72,8 +82,8 @@ async function getCamImages() {
 		</p>
 
 		<div class='camImages'>
-			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddleburyGorgeHighLowerMedium.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddleburyGorgeHighLowerMedium.jpg'></a></div>
-			<!--<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddMedium.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddMedium.jpg'></a></div>
+			<!--<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddleburyGorgeHighLowerMedium.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddleburyGorgeHighLowerMedium.jpg'></a></div>
+			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddMedium.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddMedium.jpg'></a></div>
 			<div class='refImage'><a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddHigh.jpg' target='_blank'><img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/MiddHigh.jpg'></a></div>-->
 		</div>
 		
@@ -83,7 +93,12 @@ async function getCamImages() {
 		</details>
 		<br>
 		<h5>Most Recent Images</h5>
-		<div class='camImages'>
+		<div class='camImages' style="position: relative">
+		
+		<!--<div style="width: 100%; height: 100%; background-color: rgba(255,255,255,.7); position: absolute; display: flex; justify-content: center; align-items: center; z-index: 100;">
+<h2 style="border: 2px solid black; background-color: white; padding: 1rem; text-align: center">Middlebury Camera Temporarily Offline - Check Back Soon</h2>
+		</div>-->
+		
 			<div class='camImage'><a href=${middImagesJSON[0]} target='_blank'><img width='100%' src=${middImagesJSON[0]}></a></div>
 			<div class='camImage'><a href=${middImagesJSON[1]} target='_blank'><img width='100%' src=${middImagesJSON[1]}></a></div>
 			<!--<div class='camImage'><a href=${middImagesJSON[2]} target='_blank'><img width='100%' src=${middImagesJSON[2]}></a></div>
@@ -109,9 +124,9 @@ async function getCamImages() {
 		<h5>Most Recent Images</h5>
 		<div class='camImages' style="position: relative">
 		
-		<div style="width: 100%; height: 100%; background-color: rgba(255,255,255,.7); position: absolute; display: flex; justify-content: center; align-items: center">
-<h2 style="border: 2px solid black; background-color: white; padding: 1rem; text-align: center">Big Branch Camera Temporarily Offline - Check Back Soon</h2>		
-		</div>
+		<!--<div style="width: 100%; height: 100%; background-color: rgba(255,255,255,.7); position: absolute; display: flex; justify-content: center; align-items: center; z-index: 100;">
+<h2 style="border: 2px solid black; background-color: white; padding: 1rem; text-align: center">Big Branch Camera Temporarily Offline - Check Back Soon</h2>
+		</div>-->
 		
 			<div class='camImage'><a href=${bbImagesJSON[0]} target='_blank'><img width='100%' src=${bbImagesJSON[0]}></a></div>
 			<div class='camImage'><a href=${bbImagesJSON[1]} target='_blank'><img width='100%' src=${bbImagesJSON[1]}></a></div>
@@ -119,14 +134,14 @@ async function getCamImages() {
 			<div class='camImage'><a href=${bbImagesJSON[3]} target='_blank'><img width='100%' src=${bbImagesJSON[3]}></a></div>-->
 		</div>
 		<br>`;
-	document.getElementById("riverCams").innerHTML = camsContent;
-	loaderHide();
+document.getElementById("riverCams").innerHTML = camsContent;
+loaderHide();
 }
 
 getCamImages();
 
 
-async function getLevelReports() {
+async function getLevelReports () {
 	let levelReports = await fetch("./FlowsPageAssets/PHP/levelReports.php");
 	if (levelReports.status == 200) {
 		levelReports = levelReports.text();
@@ -138,6 +153,6 @@ async function getLevelReports() {
 }
 
 let recentReports = getLevelReports();
-recentReports.then(response => {
+recentReports.then( response => {
 	document.getElementById("levelReports").innerHTML = response;
 });
