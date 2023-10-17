@@ -476,15 +476,66 @@ div#handlebarsPopulatedInfo {
 	margin: 15px auto;
 }
 
+.riverCamSection {
+	visibility: hidden;
+}
+
+#camsLoading, #camsLoader {
+	visibility: visible;
+}
+
+.overlayControls {
+	background-color: rgba(220,220,220,.35);
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.overlayControls input[type="range"]{
+	width: 80%;
+    margin: 0 auto;
+    display: block;
+	background-color: transparent;
+}
+
+.overlayControls h6 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.sliderContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.sliderContainer label {
+	margin: 5px;
+}
+
+.radios {
+	display: flex;
+	justify-content: space-evenly;
+	margin: .5rem auto;
+}
+
+.radio-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.radio-group label {
+	margin: 0 2px;
+}
+
 .camImages {
 	display: flex; 
 	justify-content: space-evenly; 
 	align-content: center; 
 	flex-wrap: wrap; 
 	margin: 20px auto; 
+	position: relative;
 }
-
-
 
 #riverCams p {
 	font-size: 14px;
@@ -504,17 +555,74 @@ div#handlebarsPopulatedInfo {
     position: relative;
 }
 
-.imageOverlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenReferenceOverlay_20230921.png");
-  background-size: cover;
-  z-index: 1000;
-}
+.imageContainer {
+	position: relative;
+	padding: 0;
+	box-sizing: border-box;
+	width: max-content;
+	height: max-content;
+  }
+  
+  .newHavenLow{
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRefImages_0ft10in.jpg");
+  }
+  
+  .newHavenMed{
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRefImages_1ft3in.jpg");
+  }
 
+  .newHavenHigh{
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRefImages_1ft7in.jpg");
+  }
+
+  .middLow{
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/MidRefImages_LowerLow.jpg");
+  }
+  
+  .middMed{
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/MidRefImages_LowerMed.jpg");
+  }
+
+  .middHigh{
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/MidRefImages_LowerHigh.jpg");
+  }
+
+  .overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-position: 0 0;
+	background-size: contain;
+	z-index:2;
+	width: 100%;
+	aspect-ratio: 600/338;
+	opacity: .5;
+  }
+    
+  
+  input[type=range] {
+	-webkit-appearance: none;
+	border: none;
+  }
+  
+  .opacitySlider::-webkit-slider-runnable-track {
+	background: linear-gradient(45deg,#e1eaf4, #4d7288);
+	border-radius: 5px;
+	height: 12px;
+  }
+  
+  
+  .opacitySlider::-webkit-slider-thumb{
+	-webkit-appearance: none;
+	appearance: none;
+	background-color: white;
+	border: 1px solid black;
+	height: 14px;
+	width: 14px;
+	border-radius: 50%;
+	margin-top: -1px;
+  }
+  
 .refImage {
 	flex-basis: 33%;
 	margin: 10px auto;
@@ -529,6 +637,8 @@ div#handlebarsPopulatedInfo {
 	font-size: 12px;
 }
 /*End Remote Visual Styles*/
+
+
 
 
 
@@ -982,6 +1092,10 @@ div#radarInfo {
 	.camImage, .refImage {
 		flex-basis: 95%;
 		margin: 10px auto;
+	}
+
+	.sliderContainer label {
+		font-size: .7rem;
 	}
 	
 	#rainTable td {
