@@ -13,7 +13,7 @@
 	</script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./FlowsPageAssets/CSS/riverStyles.css?v=1.5">
+	<link rel="stylesheet" type="text/css" href="./FlowsPageAssets/CSS/riverStyles.css?v=1.7">
 	<title>Creek VT - Flows & Forecasts</title>
 	<link rel="icon" href="https://creekvt.com/wp-content/uploads/2019/02/CreekVTLogo1A-100x100.png" sizes="32x32">
 	<meta charset="UTF-8">
@@ -419,18 +419,58 @@
 						<summary>Click For Level Info & Reference Images</summary>
 						<br /><br />
 						<p>This camera was installed Mid-Summer 2023 - reference images to come</p>
+						<div class='camImages'>
+							<div class='refImage'>
+								<a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_Medium.jpg' target='_blank'>
+									<img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_Medium.jpg'>
+								</a>
+							</div>
+						<div class='refImage'>
+							<a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg' target='_blank'>
+								<img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg'>
+							</a>
+						</div>
+					</div>
 					</details>
 					<br>
-					<!-- <h5>Most Recent Images</h5> -->
+					<div class="overlayControls">
+					<h6>Overlay reference images</h6>
+							<div class="radios bbRadios">
+								<div class="radio-group">
+									<label for="bbMed">Medium</label>
+									<input type="radio" name="level" id="bbMed" value="bbMed" />
+								</div>
+								<div class="radio-group">
+									<label for="bbMedHigh">Medium-High</label>
+									<input type="radio" name="level" id="bbMedHigh" value="bbMedHigh" />
+								</div>
+							</div>
+							<div class="sliderContainer">
+								<label for="bbOpacitySlider">Current</label>
+								<input id="bbOpacitySlider" class="opacitySlider" type="range" max=1 min=0 step=.02>
+								<label for="bbOpacitySlider">Reference</label>
+							</div>
+						</div>
 					<div class='camImages' id="bbcam">
+						
 						<!--<div style="width: 100%; height: 100%; background-color: rgba(255,255,255,.7); position: absolute; display: flex; justify-content: center; align-items: center; z-index: 100;">
 							<h2 style="border: 2px solid black; background-color: white; padding: 1rem; text-align: center">Big Branch Camera Temporarily Offline - Check Back Soon</h2>
 						</div>-->
-						<div class='camImage'><a href='' target='_blank'><img width='100%'
-							src=''></a></div>
-							<div class='camImage'><a href='' target='_blank'><img width='100%'
-								src=''></a></div>
+						
+						<div class='camImages' id="bbcam">
+							<div class='camImage imageContainer'>
+								<div class="overlay bbOverlay"></div>
+								<a href='' target='_blank'>
+									<img width='100%' src=''>
+								</a>
 							</div>
+							<div class='camImage imageContainer'>
+								<div class="overlay bbOverlay"></div>
+								<a href='' target='_blank'>
+									<img width='100%' src=''>
+								</a>
+							</div>
+						</div>
 							<br>
 						</div>
 					</div>
@@ -583,7 +623,7 @@
 		});
 	</script>
 
-	<script src="./FlowsPageAssets/JS/levelReportsAndRemoteCams.js?v=12.08" async></script>
+	<script src="./FlowsPageAssets/JS/levelReportsAndRemoteCams.js?v=12.10" async></script>
 	<script src="./FlowsPageAssets/JS/gaugeReadings.js?v=3" type="module"></script>
 	<script src="./FlowsPageAssets/JS/rainInfo.js?v=3" async></script>
 	<script src="./FlowsPageAssets/JS/weatherMap.js?v=8"></script>

@@ -586,6 +586,14 @@ div#handlebarsPopulatedInfo {
   .middHigh{
 	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/MidRefImages_LowerHigh.jpg");
   }
+  
+  .bbMed{
+      background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_Medium.jpg");
+  }
+  
+  .bbMedHigh {
+      background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg");
+  }
 
   .overlay{
 	position: absolute;

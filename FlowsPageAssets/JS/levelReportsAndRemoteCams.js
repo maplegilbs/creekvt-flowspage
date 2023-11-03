@@ -74,6 +74,22 @@ middOpacitySlider.addEventListener("input", (e) => {
 	})
 })
 
+//Big Branch Slider Controls
+let bbOpacitySlider = document.getElementById("bbOpacitySlider");
+let bbImageOverlays = document.querySelectorAll(".bbOverlay");
+let bbRadioContainer = document.querySelector(".bbRadios");
+bbRadioContainer.addEventListener("click", e => {
+	bbImageOverlays.forEach(imageOverlay => {
+		imageOverlay.classList = ['overlay']
+		imageOverlay.classList.add(e.target.value)
+	})
+})
+bbOpacitySlider.addEventListener("input", (e) => {
+	bbImageOverlays.forEach(imageOverlay => {
+		imageOverlay.style.opacity = e.target.value
+	})
+})
+
 }
 
 getCamImages();
