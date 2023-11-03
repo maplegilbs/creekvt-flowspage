@@ -535,6 +535,7 @@ div#handlebarsPopulatedInfo {
 	flex-wrap: wrap; 
 	margin: 20px auto; 
 	position: relative;
+	width: 100%;
 }
 
 #riverCams p {
