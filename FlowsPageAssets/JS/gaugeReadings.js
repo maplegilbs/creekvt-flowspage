@@ -408,7 +408,7 @@ let getStationNames = (promisedData) => {
 //calling getStationNames after promise (from fetch function) is resolved, passing in the resolved Value (json data);
 infoObj.then(getStationNames)
 	.then(loaderHide)
-// .then(showSnow);
+.then(showSnow);
 
 
 console.log(infoObj);

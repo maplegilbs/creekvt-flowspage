@@ -232,11 +232,13 @@
 			<div id="handlebarsPopulatedInfo">
 			</div>
 		</div>
-
+		
 		<div class="sectionContainer">
 			<div class="innerSection">
 				<h2 class="sectionHeader">Remote Visuals</h2>
 				<hr class="sectionHr">
+
+				<!--NEW HAVEN CAM-->
 				<div id="riverCams">
 					<p>These images are gathered from cell-enabled trail cams set to take images every 2hrs between 7am and 5pm</p>
 					<p>Issues with these images? Contact us at <a href='mailto:gopaddling@creekvt.com?subject=River Cameras'> gopaddling@creekvt.com</a></p>
@@ -332,13 +334,71 @@
 						<hr>
 					</div>
 					<br>
+					<!--END NEW HAVEN CAM-->
+
+					<!--NBL CAM-->
+					<div class="riverCamSection">
+						<h4>North Branch Of The Lamoille</h4>
+							<h5> Camera located on the run, ~&#8531; mile upstream of the Codding Hollow Bridge
+									<br />
+									<details>
+						<summary>Click For Level Info & Reference Images</summary>
+						<br /><br />
+						<p>This camera was installed Late Fall 2023 - more reference images to come</p>
+						<div class='camImages'>
+						<div class='refImage'>
+							<a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/NBLRefImages_Minimum.jpg' target='_blank'>
+								<img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/NBLRefImages_Minimum.jpg'>
+							</a>
+						</div>
+					</div>
+					</details>
+					<br>
+					<div class="overlayControls">
+					<h6>Overlay reference images</h6>
+							<div class="radios nblRadios">
+								<div class="radio-group">
+									<label for="nblMin">Minimum</label>
+									<input type="radio" name="level" id="nblMin" value="nblMin" />
+								</div>
+							</div>
+							<div class="sliderContainer">
+								<label for="nblOpacitySlider">Current</label>
+								<input id="nblOpacitySlider" class="opacitySlider" type="range" max=1 min=0 step=.02>
+								<label for="nblOpacitySlider">Reference</label>
+							</div>
+						</div>
+					<div class='camImages' id="nblcam">
+						<!--<div style="width: 100%; height: 100%; background-color: rgba(255,255,255,.7); position: absolute; display: flex; justify-content: center; align-items: center; z-index: 100;">
+							<h2 style="border: 2px solid black; background-color: white; padding: 1rem; text-align: center">Big Branch Camera Temporarily Offline - Check Back Soon</h2>
+						</div>-->
+						<div class='camImages' id="nblcam">
+							<div class='camImage imageContainer'>
+								<div class="overlay nblOverlay"></div>
+								<a href='' target='_blank'>
+									<img width='100%' src=''>
+								</a>
+							</div>
+							<div class='camImage imageContainer'>
+								<div class="overlay nblOverlay"></div>
+								<a href='' target='_blank'>
+									<img width='100%' src=''>
+								</a>
+							</div>
+						</div>
+						<br>
+						</div>
+					</div>
+					<!--END NBL CAM-->
+					
+					<!--MIDD CAM-->
 					<div class="riverCamSection">
 						<h4>Middlebury River</h4>
 						<h5>Near Grist Mill Road Bridge, ½ mile below the takeout</h5>
 						<br />
 						<details>
-						<summary>Click For Level Info & Reference Images</summary>
-						<br /><br />
+							<summary>Click For Level Info & Reference Images</summary>
+							<br /><br />
 						<p class='disclaimer'>**The Middlebury River is a dangerous river that is extremely level
 							dependant. The rocks in these images shift regularly thus correlating live images to these
 							as a level reference should be done with extreme caution.
@@ -366,12 +426,11 @@
 					
 					<p class='disclaimer'>During the summer of 2023 the Middlebury drainage saw multiple flood events on a scale comparable if not worse than that seen during Irene. As a result the Middlebury River has changed significantly, including the gauges rocks used to judge level at this remote camera.  These reference images are preliminary and should be used as a rough guide only.  More importantly, the Gorge itself saw several rocks shift and as of October 2023 has not been run.  If you choose to venture in, it is recommended you do so with extreme caution and only after a thorough scout.
 					</p>
-					
 				</details>
 				<br>
 				<div class="overlayControls">
 					<h6>Overlay reference images</h6>
-							<div class="radios middRadios">
+					<div class="radios middRadios">
 								<div class="radio-group">
 									<label for="middLow">Low</label>
 									<input type="radio" name="level" id="middLow" value="middLow" />
@@ -407,12 +466,15 @@
 						</div>
 						<hr>
 						<br>
-						</div>
-						<div class="riverCamSection">
-							<h4>Big Branch Of Otter Creek</h4>
-							<h5> Camera located on the run! Installed and hosted by Justin Crannell. Huge thanks to his work -
-								he is <em>the</em> local guide for the Big Branch.</h5>
-								<p>Check out his write-up here <a href="https://creekvt.com/riverguide/thebigbranch/">guide to the
+					</div>
+					<!--END MIDD CAM-->
+						
+					<!--BIG BRANCH CAM-->
+					<div class="riverCamSection">
+						<h4>Big Branch Of Otter Creek</h4>
+						<h5> Camera located on the run! Installed and hosted by Justin Crannell. Huge thanks to his work -
+							he is <em>the</em> local guide for the Big Branch.</h5>
+							<p>Check out his write-up here <a href="https://creekvt.com/riverguide/thebigbranch/">guide to the
 									Big Branch</a></p>
 									<br />
 									<details>
@@ -425,8 +487,8 @@
 									<img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_Medium.jpg'>
 								</a>
 							</div>
-						<div class='refImage'>
-							<a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg' target='_blank'>
+							<div class='refImage'>
+								<a href='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg' target='_blank'>
 								<img src='./FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg'>
 							</a>
 						</div>
@@ -435,7 +497,7 @@
 					<br>
 					<div class="overlayControls">
 					<h6>Overlay reference images</h6>
-							<div class="radios bbRadios">
+					<div class="radios bbRadios">
 								<div class="radio-group">
 									<label for="bbMed">Medium</label>
 									<input type="radio" name="level" id="bbMed" value="bbMed" />
@@ -452,11 +514,9 @@
 							</div>
 						</div>
 					<div class='camImages' id="bbcam">
-						
-						<!--<div style="width: 100%; height: 100%; background-color: rgba(255,255,255,.7); position: absolute; display: flex; justify-content: center; align-items: center; z-index: 100;">
-							<h2 style="border: 2px solid black; background-color: white; padding: 1rem; text-align: center">Big Branch Camera Temporarily Offline - Check Back Soon</h2>
-						</div>-->
-						
+						<div style="width: 100%; height: 100%; background-color: rgba(255,255,255,.7); position: absolute; display: flex; justify-content: center; align-items: center; z-index: 100;">
+							<h2 style="border: 2px solid black; background-color: white; padding: 1rem; text-align: center">Big Branch Camera Offline For Winter</h2>
+						</div>
 						<div class='camImages' id="bbcam">
 							<div class='camImage imageContainer'>
 								<div class="overlay bbOverlay"></div>
@@ -471,15 +531,19 @@
 								</a>
 							</div>
 						</div>
-							<br>
+						<br>
 						</div>
 					</div>
+					<!--END BIG BRANCH CAM-->
+					
+
+
 					<div id="camsLoading" class="loading">LOADING</div>
 					<div id="camsLoader" class="loader"></div>
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="sectionContainer">
 			<div class="innerSection">
 				<h2 class="sectionHeader">Recent Level Reports</h2>
@@ -510,14 +574,14 @@
 								<th>12hr</th>
 								<th class="mobile-hide">24hr</th>
 							</tr>
-							</tr>
+						</tr>
 
-						</thead>
-						<tbody>
-						</tbody>
-					</table>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
 
-				</div>
+			</div>
 			</div>
 		</div>
 
@@ -543,7 +607,7 @@
 
 		<!-- reinstate when SWE is relevant in fall also updated in gaugeReadings js file 
 		check chained promises ~line 411-->
-		<!--<div class="sectionContainer">
+		<div class="sectionContainer">
 			<div class="innerSection">
 				<div id="snowInfo">
 					<h2 class="sectionHeader">Snow Water Equivalent & Melt Rates</h2>
@@ -562,7 +626,7 @@
 					<br/>
 				</div>
 			</div>
-		</div>-->
+		</div>
 
 
 		<div class="sectionContainer" id="forecastedPrecip">

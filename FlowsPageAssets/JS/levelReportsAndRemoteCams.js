@@ -39,56 +39,82 @@ async function getCamImages() {
 		bbAnchors[i].href = bbImagesJSON[i];
 	})
 
+	let nblImages = await fetch("https://river-cams-photo-fetch.herokuapp.com/photos?riverName=northbranchlamoille&quantity=1000")
+	let nblImagesJSON = await nblImages.json();
+	nblImagesJSON.reverse();
+	let nblImgs = document.querySelectorAll("#nblcam .camImage img")
+	let nblAnchors = document.querySelectorAll("#nblcam .camImage a")
+	nblImgs.forEach((img, i) => {
+		nblImgs[i].src = nblImagesJSON[i];
+		nblAnchors[i].href = nblImagesJSON[i];
+	})
+
 	loaderHide();
 
 
-//New Haven Slider Controls
-let newHavenOpacitySlider = document.getElementById("newHavenOpacitySlider");
-let newHavenImageOverlays = document.querySelectorAll(".newHavenOverlay");
-let newHavenRadioContainer = document.querySelector(".newHavenRadios");
-newHavenRadioContainer.addEventListener("click", e => {
-	newHavenImageOverlays.forEach(imageOverlay => {
-		imageOverlay.classList = ['overlay']
-		imageOverlay.classList.add(e.target.value)
+	//New Haven Slider Controls
+	let newHavenOpacitySlider = document.getElementById("newHavenOpacitySlider");
+	let newHavenImageOverlays = document.querySelectorAll(".newHavenOverlay");
+	let newHavenRadioContainer = document.querySelector(".newHavenRadios");
+	newHavenRadioContainer.addEventListener("click", e => {
+		newHavenImageOverlays.forEach(imageOverlay => {
+			imageOverlay.classList = ['overlay']
+			imageOverlay.classList.add(e.target.value)
+		})
 	})
-})
-newHavenOpacitySlider.addEventListener("input", (e) => {
-	newHavenImageOverlays.forEach(imageOverlay => {
-		imageOverlay.style.opacity = e.target.value
+	newHavenOpacitySlider.addEventListener("input", (e) => {
+		newHavenImageOverlays.forEach(imageOverlay => {
+			imageOverlay.style.opacity = e.target.value
+		})
 	})
-})
 
-//Middlebury Slider Controls
-let middOpacitySlider = document.getElementById("middOpacitySlider");
-let middImageOverlays = document.querySelectorAll(".middOverlay");
-let middRadioContainer = document.querySelector(".middRadios");
-middRadioContainer.addEventListener("click", e => {
-	middImageOverlays.forEach(imageOverlay => {
-		imageOverlay.classList = ['overlay']
-		imageOverlay.classList.add(e.target.value)
+	//Middlebury Slider Controls
+	let middOpacitySlider = document.getElementById("middOpacitySlider");
+	let middImageOverlays = document.querySelectorAll(".middOverlay");
+	let middRadioContainer = document.querySelector(".middRadios");
+	middRadioContainer.addEventListener("click", e => {
+		middImageOverlays.forEach(imageOverlay => {
+			imageOverlay.classList = ['overlay']
+			imageOverlay.classList.add(e.target.value)
+		})
 	})
-})
-middOpacitySlider.addEventListener("input", (e) => {
-	middImageOverlays.forEach(imageOverlay => {
-		imageOverlay.style.opacity = e.target.value
+	middOpacitySlider.addEventListener("input", (e) => {
+		middImageOverlays.forEach(imageOverlay => {
+			imageOverlay.style.opacity = e.target.value
+		})
 	})
-})
 
-//Big Branch Slider Controls
-let bbOpacitySlider = document.getElementById("bbOpacitySlider");
-let bbImageOverlays = document.querySelectorAll(".bbOverlay");
-let bbRadioContainer = document.querySelector(".bbRadios");
-bbRadioContainer.addEventListener("click", e => {
-	bbImageOverlays.forEach(imageOverlay => {
-		imageOverlay.classList = ['overlay']
-		imageOverlay.classList.add(e.target.value)
+	//Big Branch Slider Controls
+	let bbOpacitySlider = document.getElementById("bbOpacitySlider");
+	let bbImageOverlays = document.querySelectorAll(".bbOverlay");
+	let bbRadioContainer = document.querySelector(".bbRadios");
+	bbRadioContainer.addEventListener("click", e => {
+		bbImageOverlays.forEach(imageOverlay => {
+			imageOverlay.classList = ['overlay']
+			imageOverlay.classList.add(e.target.value)
+		})
 	})
-})
-bbOpacitySlider.addEventListener("input", (e) => {
-	bbImageOverlays.forEach(imageOverlay => {
-		imageOverlay.style.opacity = e.target.value
+	bbOpacitySlider.addEventListener("input", (e) => {
+		bbImageOverlays.forEach(imageOverlay => {
+			imageOverlay.style.opacity = e.target.value
+		})
 	})
-})
+
+	//NBL Slider Controls
+	let nblOpacitySlider = document.getElementById("nblOpacitySlider");
+	let nblImageOverlays = document.querySelectorAll(".nblOverlay");
+	let nblRadioContainer = document.querySelector(".nblRadios");
+	nblRadioContainer.addEventListener("click", e => {
+		nblImageOverlays.forEach(imageOverlay => {
+			imageOverlay.classList = ['overlay']
+			imageOverlay.classList.add(e.target.value)
+		})
+	})
+	nblOpacitySlider.addEventListener("input", (e) => {
+		nblImageOverlays.forEach(imageOverlay => {
+			imageOverlay.style.opacity = e.target.value
+		})
+	})
 
 }
 

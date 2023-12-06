@@ -1,4 +1,5 @@
-body, p {
+body,
+p {
 	margin: 0;
 }
 
@@ -6,60 +7,64 @@ body, p {
 
 /*Header Nav Styles*/
 nav.navbar {
-		font-family: Montserrat, sans-serif;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 14px;
-		background-image: linear-gradient(110deg, #4e647b, #293b46);
-		box-shadow: 2px 3px 10px 4px;
-		margin-bottom: 20px;
-		height: 70px;
-		padding: 2px 20px 4px 0;
-	}
-	
+	font-family: Montserrat, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	background-image: linear-gradient(110deg, #4e647b, #293b46);
+	box-shadow: 2px 3px 10px 4px;
+	margin-bottom: 20px;
+	height: 70px;
+	padding: 2px 20px 4px 0;
+}
+
 .navbar-dark .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 #navbarSupportedContent {
-    justify-content: flex-end;
+	justify-content: flex-end;
 }
 
-nav a.navbar-brand, nav a.navbar-brand img {
+nav a.navbar-brand,
+nav a.navbar-brand img {
 	height: 66px;
 	padding: 2px 20px;
 }
 
-.dropdown-menu{
+.dropdown-menu {
 	background-color: #364958;
 	border: 0px;
 	z-index: 999999;
 }
 
-a.dropdown-item{
-		color: #f5f5f5;
-		line-height: 28px;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 14px;
-	}
-	
+a.dropdown-item {
+	color: #f5f5f5;
+	line-height: 28px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+}
+
 .dropdown-toggle::after {
-		display: none;
-	}
+	display: none;
+}
+
 /*End Header Nav Styles*/
 
 
 
 
 /*Loader Animation Styles*/
-.loading, .loader {
+.loading,
+.loader {
 	box-sizing: border-box;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	
+
 }
+
 .loading {
 	font-family: 'Anton', sans-serif;
 	letter-spacing: 4px;
@@ -84,13 +89,19 @@ a.dropdown-item{
 	border-bottom: 7px solid #ffffff;
 	border-radius: 100%;
 	animation: loaderspin 3s linear infinite;
+}
+
+
+@keyframes loaderspin {
+	0% {
+		transform: rotate(0deg);
 	}
 
-	
-@keyframes loaderspin {
-	0% {transform: rotate(0deg);}
-	100% {transform: rotate(360deg);}
+	100% {
+		transform: rotate(360deg);
+	}
 }
+
 /*End Loader Animation Styles*/
 
 
@@ -110,14 +121,14 @@ button:focus {
 
 
 .jumpToOptions {
-  position: absolute;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 99999;
-  background-color: white; 
-  border-radius: 5px;
-  right: 5%;
-  display: none;
-  justify-content: space-evenly;
+	position: absolute;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 99999;
+	background-color: white;
+	border-radius: 5px;
+	right: 5%;
+	display: none;
+	justify-content: space-evenly;
 }
 
 .flexToggle {
@@ -130,7 +141,8 @@ button:focus {
 	flex-direction: column;
 }
 
-.jumpToOptions a, .jumpToOptions a:link {
+.jumpToOptions a,
+.jumpToOptions a:link {
 	padding: 12px 16px;
 	text-decoration: none;
 	display: inline-block;
@@ -140,6 +152,7 @@ button:focus {
 	font-size: .8em;
 	text-transform: uppercase;
 }
+
 /*End Secondary Nav*/
 
 
@@ -171,9 +184,10 @@ hr.sectionHr {
 	border-bottom: 2px solid #232323;
 	margin-bottom: 25px;
 }
+
 .sectionContainer:nth-child(odd) {
 	background-color: #a5b7bf;
-	box-shadow: 2px 2px 4px 5px rgba(188,188,188,.5);
+	box-shadow: 2px 2px 4px 5px rgba(188, 188, 188, .5);
 }
 
 .sectionContainer {
@@ -185,35 +199,36 @@ hr.sectionHr {
 
 .innerSection {
 	width: 100%;
-    background: linear-gradient(white, rgba(255,255,255,.8));
-    box-shadow: 2px 2px 5px 5px #333;
-    margin: 0 auto;
-    padding: 10px 15px 0px 15px;
-    min-height: 72vh;
+	background: linear-gradient(white, rgba(255, 255, 255, .8));
+	box-shadow: 2px 2px 5px 5px #333;
+	margin: 0 auto;
+	padding: 10px 15px 0px 15px;
+	min-height: 72vh;
 	position: relative;
 }
 
 .sectionHeader {
 	text-align: left;
 	margin: 10px auto;
-    padding-left: 30px;
-    text-transform: uppercase;
-    font-family: Montserrat, sans-serif;
-    font-weight: bold;
+	padding-left: 30px;
+	text-transform: uppercase;
+	font-family: Montserrat, sans-serif;
+	font-weight: bold;
 }
 
-.innerSection hr, .innerSection h2.sectionHeader {
+.innerSection hr,
+.innerSection h2.sectionHeader {
 	margin-left: 5px;
 	padding-left: 0;
 }
 
 #allSections button {
 	display: block;
-	background: linear-gradient(45deg,#e1eaf4, #4d7288);
+	background: linear-gradient(45deg, #e1eaf4, #4d7288);
 	color: white;
 	padding: 10px;
 	margin: 0 5% 0 auto;
-	border: 2px solid rgb(118,118,118);
+	border: 2px solid rgb(118, 118, 118);
 	font-family: 'Montserrat';
 	font-weight: 700;
 	font-size: .8em;
@@ -222,7 +237,9 @@ hr.sectionHr {
 	border-radius: 5px;
 }
 
-#allSections button a, #allSections button a:link, #allSections button a:active {
+#allSections button a,
+#allSections button a:link,
+#allSections button a:active {
 	color: white;
 }
 
@@ -237,15 +254,15 @@ div#handlebarsPopulatedInfo {
 }
 
 #info {
-  display: inline-block;
-  font-size: 16px;
-  width: 98%;
-  max-width: 1400px;
-  height: 95vh;
-  overflow-y: scroll;
-  margin: 5px auto;
-  border-radius: 2px;
-  margin-top: 15px;
+	display: inline-block;
+	font-size: 16px;
+	width: 98%;
+	max-width: 1400px;
+	height: 95vh;
+	overflow-y: scroll;
+	margin: 5px auto;
+	border-radius: 2px;
+	margin-top: 15px;
 }
 
 .flowsTable {
@@ -254,7 +271,9 @@ div#handlebarsPopulatedInfo {
 	margin: 0 auto 10px auto;
 	text-align: center;
 	padding: 0 1px;
-	font-family: Montserrat /*'Verdana'*/, serif;
+	font-family: Montserrat
+		/*'Verdana'*/
+		, serif;
 	font-weight: 600;
 	border-collapse: separate;
 	border-spacing: 0px 8px;
@@ -262,37 +281,38 @@ div#handlebarsPopulatedInfo {
 }
 
 #info::-webkit-scrollbar {
-  width: 14px;
+	width: 14px;
 }
 
 #info::-webkit-scrollbar-track {
-  box-shadow: inset 10px 10px 5px grey;
-  border-radius: 2px;
+	box-shadow: inset 10px 10px 5px grey;
+	border-radius: 2px;
 }
 
 /* Handle */
 #info::-webkit-scrollbar-thumb {
-  background: linear-gradient(#d9f6ff, #3c5061);
-  border-radius: 2px;
-  border:  1px solid rgba(33,33,33, .5);
+	background: linear-gradient(#d9f6ff, #3c5061);
+	border-radius: 2px;
+	border: 1px solid rgba(33, 33, 33, .5);
 }
 
-.flowsTable  tr {
+.flowsTable tr {
 	background-color: #f0f0f0;
 	position: relative;
 }
-	
-.flowsTable td, .flowsTable th {
+
+.flowsTable td,
+.flowsTable th {
 	padding: 5px 5px;
 	box-sizing: border-box;
 	overflow: hidden;
 	width: 20%;
-	}
+}
 
 #headerMinMax {
 	font-size: .8em;
 }
-	
+
 .sectionLabel td {
 	border-top: 2px solid white;
 	position: sticky;
@@ -313,18 +333,21 @@ div#handlebarsPopulatedInfo {
 .running td {
 	background-image: linear-gradient(175deg, #88ee99 2%, #228833ee, #88ee99);
 }
-.high td{
+
+.high td {
 	background-image: linear-gradient(175deg, #ee9999 2%, #d80000ee, #ee9999);
 }
-.low td{
+
+.low td {
 	background-image: linear-gradient(175deg, #eeee99 2%, #ffad15ee, #eeee99);
 }
-.noInfo td{
+
+.noInfo td {
 	background-image: linear-gradient(175deg, #454545, #eeeeee);
 }
 
-.flowsTable  th {
-	padding: 12px;	
+.flowsTable th {
+	padding: 12px;
 	position: sticky;
 	position: -webkit-sticky;
 	position: -moz-sticky;
@@ -339,13 +362,13 @@ div#handlebarsPopulatedInfo {
 	z-index: 1000;
 	margin-bottom: 0;
 	height: 58px;
-	}
+}
 
 .flowsTable th hr {
 	border-bottom: 1px solid white;
 	margin: 2px auto;
 }
-	
+
 .diff {
 	font-weight: 600;
 	font-size: 12px;
@@ -353,8 +376,8 @@ div#handlebarsPopulatedInfo {
 
 .levelContainer {
 	display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
+	flex-wrap: nowrap;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -362,8 +385,8 @@ div#handlebarsPopulatedInfo {
 	display: flex;
 	justify-content: center;
 	box-sizing: border-box;
-    text-align: left;
-    flex-basis: 15px;
+	text-align: left;
+	flex-basis: 15px;
 	width: 15px;
 	height: 75px;
 	margin: 7px;
@@ -376,10 +399,11 @@ div#handlebarsPopulatedInfo {
 	font-weight: 700;
 	font-size: 12px;
 	text-shadow: 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white;
-    align-self: center;
-    padding: 1px;
-    border-radius: 5px;
+	align-self: center;
+	padding: 1px;
+	border-radius: 5px;
 }
+
 .arrow {
 	border: solid black;
 	border-width: 0 3px 3px 0;
@@ -412,23 +436,27 @@ div#handlebarsPopulatedInfo {
 }
 
 .flowsTable tr:nth-child(even) {
-	background-color: rgba(188,188,188,.05);
+	background-color: rgba(188, 188, 188, .05);
 }
 
 .gaugeName {
 	font-size: .8em;
 }
 
-.level, .name{
+.level,
+.name {
 	font-size: 1.05em;
 	font-weight: 800;
 }
 
-.name a, .name a:visited, .name a:link {
+.name a,
+.name a:visited,
+.name a:link {
 	text-decoration: underline;
 	color: #232323;
 	font-weight: 700;
 }
+
 /*End Flows Table Styles*/
 
 
@@ -447,17 +475,17 @@ div#handlebarsPopulatedInfo {
 	display: inline-block;
 	font-size: 20px;
 	font-weight: 500;
-	background: linear-gradient( 45deg,#4b535c, #4d7288);
-    color: white;
-    padding: 1px 14px;
-    margin: 0 5% 0 auto;
-    border: 2px solid rgb(118,118,118);
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: .8em;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 5px #333;
-    border-radius: 5px;
+	background: linear-gradient(45deg, #4b535c, #4d7288);
+	color: white;
+	padding: 1px 14px;
+	margin: 0 5% 0 auto;
+	border: 2px solid rgb(118, 118, 118);
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: .8em;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 5px #333;
+	border-radius: 5px;
 }
 
 #riverCams h3 {
@@ -480,20 +508,21 @@ div#handlebarsPopulatedInfo {
 	visibility: hidden;
 }
 
-#camsLoading, #camsLoader {
+#camsLoading,
+#camsLoader {
 	visibility: visible;
 }
 
 .overlayControls {
-	background-color: rgba(220,220,220,.35);
-    padding: 0.5rem;
-    border-radius: 5px;
+	background-color: rgba(220, 220, 220, .35);
+	padding: 0.5rem;
+	border-radius: 5px;
 }
 
-.overlayControls input[type="range"]{
+.overlayControls input[type="range"] {
 	width: 80%;
-    margin: 0 auto;
-    display: block;
+	margin: 0 auto;
+	display: block;
 	background-color: transparent;
 }
 
@@ -505,6 +534,7 @@ div#handlebarsPopulatedInfo {
 .sliderContainer {
 	display: flex;
 	flex-direction: row;
+	align-items: center;
 }
 
 .sliderContainer label {
@@ -529,11 +559,11 @@ div#handlebarsPopulatedInfo {
 }
 
 .camImages {
-	display: flex; 
-	justify-content: space-evenly; 
-	align-content: center; 
-	flex-wrap: wrap; 
-	margin: 20px auto; 
+	display: flex;
+	justify-content: space-evenly;
+	align-content: center;
+	flex-wrap: wrap;
+	margin: 20px auto;
 	position: relative;
 	width: 100%;
 }
@@ -550,10 +580,10 @@ div#handlebarsPopulatedInfo {
 }
 
 .camImage a {
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: relative;
 }
 
 .imageContainer {
@@ -562,66 +592,74 @@ div#handlebarsPopulatedInfo {
 	box-sizing: border-box;
 	width: max-content;
 	height: max-content;
-  }
-  
-  .newHavenLow{
+}
+
+.newHavenLow {
 	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRefImages_0ft10in.jpg");
-  }
-  
-  .newHavenMed{
+}
+
+.newHavenMed {
 	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRefImages_1ft3in.jpg");
-  }
+}
 
-  .newHavenHigh{
+.newHavenHigh {
 	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NewHavenRefImages_1ft7in.jpg");
-  }
+}
 
-  .middLow{
+.middLow {
 	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/MidRefImages_LowerLow.jpg");
-  }
-  
-  .middMed{
+}
+
+.middMed {
 	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/MidRefImages_LowerMed.jpg");
-  }
+}
 
-  .middHigh{
+.middHigh {
 	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/MidRefImages_LowerHigh.jpg");
-  }
-  
-  .bbMed{
-      background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_Medium.jpg");
-  }
-  
-  .bbMedHigh {
-      background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg");
-  }
+}
 
-  .overlay{
+.bbMed {
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_Medium.jpg");
+}
+
+.bbMedHigh {
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/BBRefImages_MediumHigh.jpg");
+}
+
+.nblMin {
+	background-image: url("https://creekvt.com/FlowsPageAssets/Images/RiverCamsReferenceImages/NBLRefImages_Minimum.jpg");
+}
+
+.overlay {
 	position: absolute;
 	top: 0;
 	left: 0;
 	background-position: 0 0;
 	background-size: contain;
-	z-index:2;
+	z-index: 2;
 	width: 100%;
 	aspect-ratio: 600/338;
 	opacity: .5;
-  }
-    
-  
-  input[type=range] {
+}
+
+input[type=range] {
 	-webkit-appearance: none;
 	border: none;
-  }
-  
-  .opacitySlider::-webkit-slider-runnable-track {
-	background: linear-gradient(45deg,#e1eaf4, #4d7288);
+}
+
+.opacitySlider {
+	background: linear-gradient(45deg, #e1eaf4, #4d7288);
+	height: 12px;
+	border-radius: 5px;
+}
+
+.opacitySlider::-webkit-slider-runnable-track {
+	background: linear-gradient(45deg, #e1eaf4, #4d7288);
 	border-radius: 5px;
 	height: 12px;
-  }
-  
-  
-  .opacitySlider::-webkit-slider-thumb{
+}
+
+.opacitySlider::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
 	background-color: white;
@@ -630,8 +668,8 @@ div#handlebarsPopulatedInfo {
 	width: 14px;
 	border-radius: 50%;
 	margin-top: -1px;
-  }
-  
+}
+
 .refImage {
 	flex-basis: 33%;
 	margin: 10px auto;
@@ -645,6 +683,7 @@ div#handlebarsPopulatedInfo {
 #riverCams p.disclaimer {
 	font-size: 12px;
 }
+
 /*End Remote Visual Styles*/
 
 
@@ -666,26 +705,27 @@ div#handlebarsPopulatedInfo {
 #levelReportsTable th {
 	/* padding-left: 8px; */
 	height: 70px;
-    font-weight: 700;
-    font-size: 14px;
+	font-weight: 700;
+	font-size: 14px;
 	color: white;
-    /* text-shadow: 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white; */
+	/* text-shadow: 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white; */
 }
 
 #levelReportsTable tr:nth-child(even) {
-	background-color: rgba(188,188,188,.25);
+	background-color: rgba(188, 188, 188, .25);
 }
 
 #levelReportsTable td {
-    color: black;
-    font-size: .8em;
-    font-weight: 600;
-    padding: 8px;
+	color: black;
+	font-size: .8em;
+	font-weight: 600;
+	padding: 8px;
 }
 
 #levelReports button {
 	margin: 0 auto;
 }
+
 /*End Reported Levels Styles*/
 
 
@@ -693,13 +733,14 @@ div#handlebarsPopulatedInfo {
 
 
 /*Rain Table Sytles*/
-#rainTotals{
+#rainTotals {
 	position: relative;
 	min-height: 400px;
 	padding-bottom: 10px;
 }
 
-#rainLoading, #rainLoader {
+#rainLoading,
+#rainLoader {
 	top: 265px;
 }
 
@@ -718,10 +759,10 @@ div#handlebarsPopulatedInfo {
 #rainTable th {
 	/* padding-left: 8px; */
 	height: 70px;
-    font-weight: 700;
-    font-size: 14px;
+	font-weight: 700;
+	font-size: 14px;
 	color: white;
-    /* text-shadow: 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white; */
+	/* text-shadow: 1px 1px white, -1px -1px white, 1px -1px white, -1px 1px white; */
 }
 
 #rainTable .smallHeader {
@@ -729,17 +770,17 @@ div#handlebarsPopulatedInfo {
 }
 
 #rainTable tbody tr:nth-child(even) {
-	background-color: rgba(188,188,188,.25);
+	background-color: rgba(188, 188, 188, .25);
 }
 
 #rainTable td {
-    color: black;
-    font-size: 1.15rem;
+	color: black;
+	font-size: 1.15rem;
 	font-weight: 600;
-    padding: 6px;
+	padding: 6px;
 }
 
-#rainTable td:not(.stationName){
+#rainTable td:not(.stationName) {
 	letter-spacing: 3px;
 	text-shadow: 1px 1px #333, -1px -1px #333, 1px -1px #333, -1px 1px #333;
 
@@ -750,23 +791,26 @@ div#handlebarsPopulatedInfo {
 	-webkit-text-stroke: none;
 }
 
-#rainTable td.stationName, #rainTable td.source, #rainTable td.rainDate {
+#rainTable td.stationName,
+#rainTable td.source,
+#rainTable td.rainDate {
 	text-transform: uppercase;
 	text-shadow: 0px 0px #fff;
 	-webkit-text-stroke: 0px transparent;
 	font-weight: 800;
 	font-size: .7em;
-} 
+}
 
 #rainTable td.stationName {
-    width: 25vw;
-    text-align: left;
-    padding-left: 8px;
+	width: 25vw;
+	text-align: left;
+	padding-left: 8px;
 }
 
 #rainTable .rainDate {
 	font-size: .75em;
 }
+
 /*End rain table styles*/
 
 
@@ -793,15 +837,15 @@ div#handlebarsPopulatedInfo {
 }
 
 div#radarInfo {
-    display: none;
-    position: absolute;
-    top: 2%;
-    left: 5%;
-    background-color: white;
-    padding: 2px 4px;
-    border: 1px solid #333;
-    border-radius: 3px;
-    font-weight: 500;
+	display: none;
+	position: absolute;
+	top: 2%;
+	left: 5%;
+	background-color: white;
+	padding: 2px 4px;
+	border: 1px solid #333;
+	border-radius: 3px;
+	font-weight: 500;
 }
 
 #radarControls {
@@ -823,19 +867,22 @@ div#radarInfo {
 #playPause {
 	width: 80px;
 }
+
 /*Weather Map styles*/
 
 
 
 
-#forecastedPrecip, #snowInfo {
+#forecastedPrecip,
+#snowInfo {
 	padding-top: 20px;
 	display: block;
 	width: 100%;
 	text-align: center;
 }
 
-#sixHrContainer, #snowContainer {
+#sixHrContainer,
+#snowContainer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -843,7 +890,7 @@ div#radarInfo {
 	width: 100%;
 }
 
-.sixHr{
+.sixHr {
 	padding: 3px;
 	width: 30%;
 	min-height: 300px;
@@ -857,7 +904,8 @@ div#radarInfo {
 	width: 40%;
 }
 
-#swe, #melt {
+#swe,
+#melt {
 	width: 100%;
 	min-height: 400px;
 	background-repeat: no-repeat;
@@ -887,21 +935,27 @@ div#radarInfo {
 #sixHr1 {
 	background-image: url("../Images/QPF_Backgrounds/QPF_forBackground_1.png"), url("https://www.weather.gov/images/nerfc/ops/qpf_006a.png");
 }
+
 #sixHr2 {
 	background-image: url("../Images/QPF_Backgrounds/QPF_forBackground_2.png"), url("https://www.weather.gov/images/nerfc/ops/qpf_012a.png");
 }
+
 #sixHr3 {
 	background-image: url("../Images/QPF_Backgrounds/QPF_forBackground_3.png"), url("https://www.weather.gov/images/nerfc/ops/qpf_018a.png");
 }
+
 #sixHr4 {
 	background-image: url("../Images/QPF_Backgrounds/QPF_forBackground_4.png"), url("https://www.weather.gov/images/nerfc/ops/qpf_024a.png");
 }
+
 #sixHr5 {
 	background-image: url("../Images/QPF_Backgrounds/QPF_forBackground_5.png"), url("https://www.weather.gov/images/nerfc/ops/qpf_030a.png");
-}	
+}
+
 #sixHr6 {
 	background-image: url("../Images/QPF_Backgrounds/QPF_forBackground_6.png"), url("https://www.weather.gov/images/nerfc/ops/qpf_036a.png");
 }
+
 /*End QPF Styles*/
 
 
@@ -930,7 +984,8 @@ div#radarInfo {
 	display: block;
 }
 
-.footerItems ul, .footerItems p {
+.footerItems ul,
+.footerItems p {
 	padding: 0;
 	list-style: none;
 	color: white;
@@ -942,7 +997,8 @@ div#radarInfo {
 	text-transform: uppercase;
 }
 
-.footerItems li a, .footerItems li a:visited {
+.footerItems li a,
+.footerItems li a:visited {
 	color: white;
 	line-height: 37px;
 }
@@ -950,6 +1006,7 @@ div#radarInfo {
 .footerItems p {
 	margin-bottom: 0px;
 }
+
 /*End Footer Styles*/
 
 
@@ -964,21 +1021,21 @@ div#radarInfo {
 
 /*---Media Queries---*/
 @media screen and (max-width: 640px) {
-	
+
 	div#navbarSupportedContent {
 		justify-content: flex-start;
 	}
-	
+
 	nav.navbar {
 		height: auto;
 	}
-	
-	nav a.navbar-brand{
+
+	nav a.navbar-brand {
 		height: 50px;
 		padding: 0;
 		margin: 0;
 	}
-	
+
 	nav a.navbar-brand img {
 		height: 42px;
 		top: 4px;
@@ -988,11 +1045,11 @@ div#radarInfo {
 
 
 	.navbar-dark .navbar-toggler {
-		border-color: rgba(255,255,255,0);
+		border-color: rgba(255, 255, 255, 0);
 		color: white;
 	}
 
-	nav ul{
+	nav ul {
 		width: 80%;
 		margin: 0 20px;
 	}
@@ -1007,98 +1064,103 @@ div#radarInfo {
 		border: 0px;
 	}
 
-	.navbar-dark .navbar-nav li a.nav-link, a.dropdown-item{
+	.navbar-dark .navbar-nav li a.nav-link,
+	a.dropdown-item {
 		color: #f5f5f5;
 		line-height: 28px;
 		text-transform: uppercase;
 		font-weight: 700;
 		font-size: 14px;
 	}
-	
+
 	.jumpToOptions {
 		width: 80%;
 	}
-	
+
 	.innerSection {
 		padding: 10px 5px 10px 5px;
-    }
-	
-	
+	}
+
+
 	#info {
 		font-size: 10px;
 		max-width: 96vw;
 		box-shadow: 2px 2px 4px 4px rgb(188 188 188);
 	}
-	
+
 	.sectionLabel td {
 		top: 64px;
 	}
-	
+
 	.flowsTable th {
 		padding: 4px;
 		font-size: 1.25em;
 		line-height: .8em;
 	}
-	
-	.flowsTable td, .flowsTable th {
+
+	.flowsTable td,
+	.flowsTable th {
 		width: 34%;
 	}
-	
-	
-	.level, .name {
+
+
+	.level,
+	.name {
 		font-size: 1.25em;
 	}
-	
+
 	.gaugeName {
 		font-size: .75em;
 	}
-	
+
 	.mobile-show {
 		display: initial;
 	}
-	
-	.mobile-show.gaugeInfo, .gaugeName.mobile-show {
+
+	.mobile-show.gaugeInfo,
+	.gaugeName.mobile-show {
 		display: table-cell;
 		padding: 10px 8px;
 		box-sizing: border-box;
 		/*width: 19%;*/
 		overflow: hidden;
 	}
-	
+
 	.mobile-hide {
 		display: none;
 	}
-	
+
 	.level .mobile-show {
 		font-size: .9em;
 		font-weight: 500;
 	}
-	
+
 	.level .mobile-show hr {
 		margin: 1px auto;
 	}
-	
-	.flowBar{
+
+	.flowBar {
 		height: 60px;
 	}
-		
+
 	.flowsTable span.mobile-show {
-	font-size: .9em;
+		font-size: .9em;
 	}
 
 	#riverCams p {
 		font-size: 12px;
 	}
 
-    #riverCams h4 {
-        font-size: 1.25em;
-    }
+	#riverCams h4 {
+		font-size: 1.25em;
+	}
 
-    #riverCams h5 {
-        font-size: 1em;
-    }
+	#riverCams h5 {
+		font-size: 1em;
+	}
 
-	.camImage, .refImage {
+	.camImage,
+	.refImage {
 		flex-basis: 95%;
 		margin: 10px auto;
 	}
@@ -1106,41 +1168,47 @@ div#radarInfo {
 	.sliderContainer label {
 		font-size: .7rem;
 	}
-	
+
 	#rainTable td {
 		font-size: 1rem;
 	}
-		
-		
-	#rainTable td.stationName, #rainTable td.rainDate, #rainTable td.source {
-		padding: 4px;
-	font-size: .7em;
-	font-weight: 800;
-} 
 
-	
+
+	#rainTable td.stationName,
+	#rainTable td.rainDate,
+	#rainTable td.source {
+		padding: 4px;
+		font-size: .7em;
+		font-weight: 800;
+	}
+
+
 	/*noaa image adjust later*/
 	#rainTable img {
 		height: 35px;
 	}
-	
+
 	.sixHr {
 		width: 85%;
 	}
-	
+
 	.snow {
 		width: 95%;
 	}
-	
-	#snowInfo h2, #forecastedPrecip h2, .sectionHeader {
+
+	#snowInfo h2,
+	#forecastedPrecip h2,
+	.sectionHeader {
 		font-size: 1.4em;
 	}
-	
-	#seventyTwoHr, .snow {
+
+	#seventyTwoHr,
+	.snow {
 		min-height: 40vh;
 	}
-	
-	#swe, #melt {
+
+	#swe,
+	#melt {
 		min-height: 250px;
 		margin-bottom: 35px;
 	}
@@ -1148,16 +1216,14 @@ div#radarInfo {
 	#flowsFooter {
 		flex-direction: column;
 	}
-	
-	div.footerItems{
+
+	div.footerItems {
 		margin-top: 20px;
 		margin-bottom: 25px;
 	}
-	
+
 	.footerItems li {
 		line-height: 37px;
 	}
 
 }
-
-
